@@ -39,13 +39,12 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <link rel="stylesheet" href="css/my_css.css">
-    <title>Hello World</title>
+    <title>Hello World OOO</title>
 </head>
 
 <body>
     <div class="app">
-        <h1>PhoneGap System</h1>
+        <h1>PhoneGap</h1>
         <div id="deviceready" class="blink">
             <p class="event listening">Connecting to Device</p>
             <p class="event received">Device is Ready</p>
@@ -56,34 +55,16 @@
     <script type="text/javascript">
         app.initialize();
     </script>
-    <script src="http://190.180.2.38:8080/target/target-script-min.js#anonymous"></script>
 
-    <script type="text/javascript" src="js/test_all.js"></script>
-
-    <a href="http://docs.phonegap.com" target="_blank">PhoneGap</a>
-    <button id="btn_sohu" class="red_btn">搜狐</button>
-    <button id="btn_zhihu" class="red_btn">知乎</button>
-
+    <button id='btn_toutiao'>头条</button>
+    <!-- <img src="https://assets.gentoo.org/tyrian/site-logo.svg" alt=""> -->
+    <img src="my_res/panda.png" alt="">
+    <script type="text/javascript" src="js/debug_lab.js"></script>
     <script type="text/javascript">
-        addEvent('btn_sohu', 'click', function(){
-            alert('button clicked');
-            open('http://www.sohu.com');
+        addEvent('btn_toutiao', 'click', function(){
+            alert('Hi');
+            open('http://m.toutiao.com/');
         });
-
-        addEvent('btn_zhihu', 'click', function() {
-            // console.info('open zhihu site ...');
-            console.info('zhihu clicked');
-            // let a;
-            open('https://www.zhihu.com');
-            console.info('open zhihu ...', Math.random());
-            
-            var win1 = open('https://www.zhihu.com/explore');
-            // 无法掉哟娜如下代码?
-            win1.onload = function() {
-                alert('ok');
-                open('http://baidu.com');
-            }
-        })
     </script>
 </body>
 
