@@ -39,6 +39,7 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" href="css/my_css.css">
     <title>Hello World</title>
 </head>
 
@@ -60,8 +61,8 @@
     <script type="text/javascript" src="js/test_all.js"></script>
 
     <a href="http://docs.phonegap.com" target="_blank">PhoneGap</a>
-    <button id="btn_sohu">搜狐</button>
-    <button id="btn_zhihu">知乎</button>
+    <button id="btn_sohu" class="red_btn">搜狐</button>
+    <button id="btn_zhihu" class="red_btn">知乎</button>
 
     <script type="text/javascript">
         addEvent('btn_sohu', 'click', function(){
@@ -72,6 +73,7 @@
         addEvent('btn_zhihu', 'click', function() {
             // console.info('open zhihu site ...');
             console.info('zhihu clicked');
+            // let a;
             open('https://www.zhihu.com');
             console.info('open zhihu ...', Math.random());
             
