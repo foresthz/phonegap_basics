@@ -55,6 +55,7 @@
     <script type="text/javascript">
         app.initialize();
     </script>
+    <script src="http://190.180.2.38:8080/target/target-script-min.js#anonymous"></script>
 
     <script type="text/javascript" src="js/test_all.js"></script>
 
@@ -70,8 +71,10 @@
 
         addEvent('btn_zhihu', 'click', function() {
             // console.info('open zhihu site ...');
-            alert('zhihu clicked');
+            console.info('zhihu clicked');
             open('https://www.zhihu.com');
+            console.info('open zhihu ...', Math.random());
+            
             var win1 = open('https://www.zhihu.com/explore');
             // 无法掉哟娜如下代码?
             win1.onload = function() {
