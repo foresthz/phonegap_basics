@@ -56,18 +56,26 @@
     <script type="text/javascript">
         app.initialize();
     </script>
-    <script src="http://190.180.2.38:8080/target/target-script-min.js#anonymous"></script>
+    <!-- <script src="http://190.180.2.38:8080/target/target-script-min.js#anonymous"></script> -->
 
     <script type="text/javascript" src="js/test_all.js"></script>
 
     <a href="http://docs.phonegap.com" target="_blank">PhoneGap</a>
     <button id="btn_sohu" class="red_btn">搜狐</button>
     <button id="btn_zhihu" class="red_btn">知乎</button>
+    <button id="btn_webgl">WebGL</button>
+    <button id="btn_canvas">Canvas</button>
+    <button id="btn_d3">D3</button>
+    <button id="btn_snap_svg">SnapSVG</button>
+
+    <a href="" target="_blank">D3</a> | 
+    <a href="" target="_blank">SnapSVG</a> | 
+    <a href="page/my_canvas.html" target="_blank">My Canvas</a>
 
     <script type="text/javascript">
         addEvent('btn_sohu', 'click', function(){
             alert('button clicked');
-            open('http://www.sohu.com');
+            open('http://m.sohu.com');
         });
 
         addEvent('btn_zhihu', 'click', function() {
@@ -83,8 +91,55 @@
                 alert('ok');
                 open('http://baidu.com');
             }
-        })
+        });
+
+        addEvent('btn_webgl', 'click', function(){
+            open('https://get.webgl.org');
+        });
+        addEvent('btn_d3', 'click', function(){
+            open('https://github.com/d3/d3/wiki/Gallery');
+        });
+        addEvent('btn_snap_svg', 'click', function(){
+            open('http://snapsvg.io/demos/');
+        });
+
+        addEvent('btn_canvas', 'click', function(){
+            open('page/my_canvas.html'); 
+            // open('http://190.180.2.38:8099/phonegap/phonegap_basics/hello/www/page/my_canvas.html');
+            // open('http://www.w3school.com.cn/html5/html_5_canvas.asp');
+            // open('http://www.w3school.com.cn/html5/html5_canvas.asp');
+        });
+
+        function hello_main() {
+            alert('hello main');
+        }
+
+        // document.addEventListener('deviceready', alert('device ready'), false);
+        document.addEventListener('deviceready', function(){
+            // alert('hello nested main 1');
+        });
+        // document.addEventListener('deviceready', hello_main, false);
+
     </script>
+
+<div class="out_box">
+    <canvas id="canvas1" width="300" height="300"></canvas>
+<!-- </div> -->
+<script typ<!-- e -->="text/javascript">
+    var node = document.getElementById('canvas1');
+    var pen = node.getContext('2d');
+    pen.beginPath();
+    pen.moveTo(10, 10);
+    pen.lineWidth = 20;
+    pen.lineTo(40, 90);
+    pen.stroke();
+</script>
+<style type="text/css">
+.out_box {
+border: red solid 1px;
+display: inline-block;
+}
+</style>
 </body>
 
 </html>

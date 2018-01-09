@@ -1,0 +1,87 @@
+
+
+
+	<meta charset="utf8">
+
+<body>
+	<script type="text/javascript" src="../cordova.js"></script>
+	<script type="text/javascript" src="../js/index.js"></script>
+	<div class="app">
+		<div id="deviceready" class="blink">
+			<p class="event listening">Connecting to Device</p>
+			<p class="event received">加载完毕 ==> Canvas测试</p>
+		</div>
+	</div>
+	<script type="text/javascript">
+	app.initialize();
+	</script>
+	<div class="out_box">
+		<canvas id="canvas1" width="300" height="300"></canvas>
+	</div>
+</body>
+
+<script type="text/javascript">
+function drawCanvas() {
+	var node = document.getElementById('canvas1');
+	var pen = node.getContext('2d');
+	pen.beginPath();
+	pen.moveTo(10, 10);
+	pen.lineWidth = 20;
+	pen.lineTo(40, 90);
+	pen.stroke();
+
+	// alert('inside draw');
+}
+
+// var node = document.getElementById('canvas1');
+
+// window.onload= function() {
+// 	console.info('page loaded ...');
+// 	draw();
+// }
+
+// document.addEventListener('deviceready', drawCanvas, false);
+// document.addEventListener('deviceready', function(){
+// 	alert('nested function');
+// }, false);
+
+// document.addEventListener('deviceready', drawCanvas, false);
+
+window.addEventListener('load', function(){
+	// drawCanvas();
+    // alert('hello nested canvas');
+});
+// document.addEventListener('click', drawCanvas, false);
+
+document.addEventListener('deviceready', function(){
+	// alert('device ready in canvas page');
+});
+
+function hello_canvas(){
+	alert('hello canvas');
+}
+
+// ok
+// document.addEventListener('deviceready', alert('device ready canvas'), false);
+// document.addEventListener('deviceready', hello_canvas);
+
+document.addEventListener('deviceready', drawCanvas);
+
+// window.location.reload();
+
+</script>
+
+<style type="text/css">
+
+.out_box {
+	border: red solid 1px;
+	display: inline-block;
+}
+</style>
+
+
+<pre>
+	吾人适志于花柳烂漫之时，得趣于笙歌腾沸之处，乃是造花之幻境，人心之荡念也。须从木落草枯之后，向声希味淡之中，觅得一些消息，才是乾坤的橐龠，人物的根宗。
+	静处观人事，即伊吕之勋庸、夷齐之节义，无非大海浮沤；闲中玩物情，虽木石之偏枯、鹿豕之顽蠢，总是吾性真如。
+
+</pre>
